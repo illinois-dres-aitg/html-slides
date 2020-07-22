@@ -1,0 +1,330 @@
+.new {
+    font-weight: bold;
+    font-style: italic;
+    color: green;
+}
+
+.postponed {
+    font-size: 80%;
+    font-weight: bold;
+    font-style: italic;
+    color: purple;
+}
+
+a {
+    display: inline-block;
+    padding: 2px;
+    margin: 1px;
+    border: none;
+    border-radius: 4px;
+}
+
+a.btn,
+nav a.btn {
+    padding: 4px 6px;
+    font-weight: bold;
+}
+
+
+a:focus {
+    margin: 0;
+    border: 1px dashed black;
+}
+
+summary {
+    display:list-item;
+}
+
+
+header {
+    border-bottom: orange solid thin;
+    margin-bottom: 0.25em;
+    padding-bottom: 0.25em;
+    min-height: 100px;
+    vertical-align: bottom;
+}
+
+header img {
+    padding-right: 0.5em;
+    float: left;
+}
+
+header h1 {
+    padding-top: 0.25em;
+}
+
+
+footer {
+    margin-top: 0.25em;
+    padding-top: 0.25em;
+    margin-top: 1em;
+    clear: both;
+}
+
+
+footer a img {
+    position: relative;
+    top: -.1em;
+    height: 2em;
+    padding: 0.25em;
+    border: transparent 2px solid;
+    border-radius: 5px;
+}
+
+footer a:hover img,
+footer a:focus img {
+    border-color: black;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    padding-right: 1em;
+}
+
+.navbar-default {
+    background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
+    background-color: #e0e0e0;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-text {
+    color: #333;
+}
+
+
+.navbar-default .navbar-nav>li>a:focus {
+    outline: solid thin #AAAAAA;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    outline: none;
+}
+
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover {
+    text-decoration: underline;
+    background-color: #EEEEEE;
+}
+
+main {
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main a {
+    text-decoration: underline;
+}
+
+main h1 {
+    font-size: 1.75em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.125em;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main h3 {
+    margin-top: 1.5em;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main ul {
+  padding-left: 2em;
+}
+
+main li {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+main dt {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+main dd {
+    margin: 0;
+    padding: 0;
+}
+
+main dd:before {
+    content: '-';
+    padding-right: 0.25em;
+}
+
+main div.border {
+    border: 1px dotted #bbb;
+    padding: 5px;
+}
+
+main .desc {
+    margin: 0;
+    padding: 0;
+}
+
+main .person,
+main .conference {
+    margin-top: 1em;
+}
+
+main .name {
+    margin: 0;
+    padding: 0;
+    font-size: 110%;
+}
+
+main .slide-show-url {
+    margin-top: 2em;
+    font-size: 140%;
+}
+
+main figcaption {
+    margin-top: 0.25em;
+    font-size 110%;
+}
+
+#example {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    background-color: #f9f2f4;
+}
+
+main iframe {
+    margin-top: 1em;
+}
+
+main caption {
+    margin-top: 1em;
+    margin-bottom: 0.125em;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+main table.table ul {
+    padding-left: 1em;
+}
+
+main table .num {
+    text-align: right;
+}
+
+main table .text {
+    text-align: left;
+}
+
+main table.table tbody th.total,
+main table.table tbody td.total {
+    border-top: solid 2px black;
+    font-weight: bold;
+}
+
+
+main.highlight img:hover,
+main.highlight li:hover,
+main.highlight p:hover,
+main.highlight dt:hover,
+main.highlight dd:hover,
+main.highlight table.table tbody tr th:hover,
+main.highlight table.table tbody tr td:hover {
+    outline-offset: 2px;
+    outline: solid 4px blue;
+}
+
+main.highlight table.table img:hover,
+main.highlight table.table li:hover,
+main.highlight table.table p:hover,
+main.highlight table.table dt:hover,
+main.highlight table.table dd:hover {
+    outline: none;
+}
+
+
+main.highlight li:hover * {
+    outline: none;
+}
+
+
+main .code {
+    font-family: monospace;
+    background-color: #EEE;
+    border: thin solid #DDD;
+    padding: 0.25em;
+    border-radius: 6px;
+}
+
+
+main summary h2 {
+    margin: 0;
+    padding;ls 0
+    display:inline;
+}
+
+main img.chart {
+    width: 90%;
+}
+
+main .table-striped > tbody > tr:nth-of-type(2n+1) {
+  background-color: #ebf0fa;
+}
+
+aside.container {
+    margin-top: 4em;
+}
+
+aside details.stranscript-container {
+    padding: 0.25em;
+    border: transparent solid thin;
+}
+
+summary#id-slide-transcript-button {
+    font-size: 90%;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 12em;
+}
+
+summary#id-slide-transcript-button:focus {
+    outline: black dotted 2px;
+    outline-offset: 2px;
+}
+
+aside .full-transcript-link {
+    margin-top: 1em;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.full-transcript .phrase,
+.slide-transcript .phrase {
+    font-size: 120%;
+    margin: 0.5em 0;
+    padding: 0.25em;
+    line-height: 1.5em;
+}
+
+.full-transcript .phrase .name,
+.slide-transcript .phrase .name {
+    font-weight: bold;
+}
+
+.full-transcript .phrase:nth-child(even),
+.slide-transcript .phrase:nth-child(even) {
+    background-color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    border-radius: 4px;
+}
+
