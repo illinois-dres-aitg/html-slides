@@ -93,6 +93,7 @@ Add the `<addtranscript/>` element as a child of the `<slides>` element.
 The for each slide add a `<transcript>` element.
 
 ```
+...
   <slide>
     <title>Topic</title>
     <contents>
@@ -110,6 +111,7 @@ The for each slide add a `<transcript>` element.
       Something about the fourth item.
     </transcript>
   </slide>
+....
 ```
 
 
