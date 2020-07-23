@@ -82,10 +82,10 @@ Example:
   <addtranscript/>
   <title>xml-slides Example Presentation</title>
   <person>
-    <name>John Smith</name>
+    <name>Jane Smith</name>
     <desc href="http://myuniversity.edu">My University</desc>
     <desc href="http://college.myuniversity.edu">My College</desc>
-    <desc href="mailto:johnsmith@myuniversity.edu">johnsmith@myuniversity.edu</desc>
+    <desc href="mailto:janesmith@myuniversity.edu">janesmith@myuniversity.edu</desc>
   </person>
 
   <conference>
@@ -94,7 +94,7 @@ Example:
     <desc>September 17th, 2020</desc>
   </conference>
 
-  <desc href="../">Presentations</desc>
+  <desc href="https://github.com/illinois-dres-aitg/xml-slides">xml-slides Home</desc>
 
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
