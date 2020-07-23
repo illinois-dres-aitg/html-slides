@@ -1,5 +1,10 @@
 # xml-slides
-Resources to create HTML slides from an XML document
+Resources to create HTML slides from an XML document.
+
+## Examples
+
+* [Basic Slides](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example/index.html)
+* [Slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example-transcript/index.html)
 
 ## Creating HTML Slides
 
@@ -96,7 +101,8 @@ Resources to create HTML slides from an XML document
 
 ## Transcript
 
-Add the `<addtranscript/>` element as a child of the `<slides>` element.
+
+To include a button that discloses transcript content on each slide and geneates a trascript page, add the `<addtranscript/>` element as a child of the `<slides>` element. Example of [slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example-transcript/index.html).
 
 ```
 ...
@@ -108,7 +114,7 @@ Add the `<addtranscript/>` element as a child of the `<slides>` element.
 
 ```
 
-The for each slide add a `<transcript>` element.
+The for each slide add a `<transcript>` element that contains the trascript information for that slide.
 
 ```
 ...
