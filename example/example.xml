@@ -3,8 +3,14 @@
 <?xm-well_formed path="funct.dtd"?>
 <slides>
  <lang>en</lang>
-  <addtranscript/>
   <title>xml-slides Example Presentation</title>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="..\images\block-i.png"/>
+    </a>
+    Copyright &#169; 2020 University of Illinois
+  </footer>
   <person>
     <name>John Smith</name>
     <desc href="http://myuniversity.edu">My University</desc>
@@ -15,7 +21,7 @@
   <conference>
     <name href="https://someconference.org">Some Conference</name>
     <desc>Online</desc>
-    <desc>September 17th, 2020</desc>
+    <desc>Month Day, Year</desc>
   </conference>
 
   <desc href="../">Presentations</desc>
@@ -46,13 +52,26 @@
   </slide>
 
   <slide>
-    <title>Topic</title>
+    <title>Topic Slide</title>
     <contents>
       <ul>
         <li>Item 1</li>
         <li>Item 2</li>
         <li>Item 3</li>
         <li>Item 4</li>
+      </ul>
+    </contents>
+  </slide>
+
+  <slide>
+    <title>Topic Slide with Progressive Disclosure</title>
+    <contents>
+      <p>Use the SPACE key to show the items in the following list progressively.</p>
+      <ul>
+        <li>Item 1</li>
+        <li class="more">Item 2</li>
+        <li class="more">Item 3</li>
+        <li class="more">Item 4</li>
       </ul>
     </contents>
   </slide>
