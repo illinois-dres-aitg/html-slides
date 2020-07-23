@@ -71,7 +71,7 @@ Resources to create HTML slides from an XML document, including an index file of
 | transcript | slide | Transcript block to allow a transcript of lecture content for that slide to be accessible through a "Transcript" disclosure button on a slide.  Use periods to generate line breaks in the rendered transcript text. |
 
 
-Example:
+### Example of XML File Used To Generate Slides
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -141,7 +141,7 @@ Example:
 
 To include a button that discloses transcript content on each slide and geneates a trascript page, add the `<addtranscript/>` element as a child of the `<slides>` element. Example of [slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example-transcript/index.html).
 
-Example:
+### Example of Enabling Transcript Feature
 ```
 ...
 <slides>
@@ -154,7 +154,7 @@ Example:
 
 The for each slide add a `<transcript>` element that contains the trascript information for that slide.
 
-Example:
+### Example of a Slide with a `transcript` Block
 
 ```
 ...
@@ -182,7 +182,7 @@ Example:
 
 By default each slide has the slide number and total number of slides in the navigation bar at the beginning of every page.  The `noslidenumber` element can be used to not have the slide number information in the navigation bar.
 
-Example:
+### Example of Disabling Slide Numbers on Each Slide
 
 ```
 <slides>
