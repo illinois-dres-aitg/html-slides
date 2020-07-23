@@ -3,13 +3,31 @@ Resources to create HTML slides from an XML document
 
 ## Creating HTML Slides
 
-Use the command prompt to gene
+* Use the command prompt to generate the HTML slides from the XML file.
+* Create a sub-directory to keep the XML and HTML slides.
+* Run the a command to
 
 ### Windows
 
+* Edit the `\xml-slides\xml-slides.bat` to define the path the to `\xml-slides\` directory
+* Create a directory with your XML and generated HTML files.
+* Use the following command to generate the HTML files from the XML file:
+
+```
+..\xml-slides\xml-slides.bat filename.xml
+
+```
 
 ### macOS/Linux
 
+* Edit the `\xml-slides\xml-slides` to define the path the to `\xml-slides\` directory
+* Create a directory with your XML and generated HTML files.
+* Use the following command to generate the HTML files from the XML file:
+
+```
+..\xml-slides\xml-slides filename.xml
+
+```
 
 ## XML Format
 
