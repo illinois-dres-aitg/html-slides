@@ -381,19 +381,18 @@
   <xsl:template name="contentinfo" >
     <xsl:element name="footer">
       <xsl:attribute name="class">container</xsl:attribute>
-
       <xsl:element name="div">
         <xsl:attribute name="id">footer</xsl:attribute>
         <xsl:attribute name="class">well well-sm</xsl:attribute>
-        <xsl:element name="a">
-          <xsl:attribute name="href">http://illinois.edu</xsl:attribute>
-          <xsl:attribute name="target">illinois</xsl:attribute>
-          <xsl:element name="img">
-            <xsl:attribute name="src">https://aitg.disability.illinois.edu/common/images/block-i.png</xsl:attribute>
-            <xsl:attribute name="alt">University of Illinois</xsl:attribute>
-          </xsl:element>
-        </xsl:element>
-        Copyright &#169; 2020 University of Illinois
+        <xsl:choose>
+          <xsl:when test="/slides/footer">
+            <xsl:apply-templates select="/slides/footer/*"/>
+            <xsl:value-of select="/slides/footer/."/>
+          </xsl:when>
+          <xsl:otherwise>
+            Copyright  &#169; 2020
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:element>
     </xsl:element>
   </xsl:template>

@@ -4,6 +4,15 @@
 <slides>
  <lang>en</lang>
   <addtranscript/>
+  <noslidenumbers/>
+  <footer>
+    <a href="https://illinois.edu"
+      alt="University of Illinois">
+      <img src="..\images\block-i.png"/>
+    </a>
+    Copyright &copy; 2020 University of Illinois
+  </footer>
+
   <title>xml-slides Example Presentation with Transcript</title>
   <person>
     <name>John Smith</name>

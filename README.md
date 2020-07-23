@@ -1,5 +1,5 @@
 # xml-slides
-Resources to create HTML slides from an XML document.
+Resources to create HTML slides from an XML document, including an index file of all the files using their titles.
 
 ## Examples
 
@@ -35,6 +35,13 @@ Resources to create HTML slides from an XML document.
 ```
 
 ## XML Format
+
+| Element | Description |
+|---------|-------------|
+| slides  | Container element for all of the information to generate the slides |
+
+
+Example:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -104,6 +111,7 @@ Resources to create HTML slides from an XML document.
 
 To include a button that discloses transcript content on each slide and geneates a trascript page, add the `<addtranscript/>` element as a child of the `<slides>` element. Example of [slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example-transcript/index.html).
 
+Example:
 ```
 ...
 <slides>
@@ -115,6 +123,8 @@ To include a button that discloses transcript content on each slide and geneates
 ```
 
 The for each slide add a `<transcript>` element that contains the trascript information for that slide.
+
+Example:
 
 ```
 ...
@@ -138,8 +148,16 @@ The for each slide add a `<transcript>` element that contains the trascript info
 ....
 ```
 
+## No Slide Number Option
 
+By default each slide has the slide number and total number of slides in the navigation bar at the beginning of every page.  The `noslidenumber` element can be used to not have the slide number information in the navigation bar.
 
+Example:
 
-
+```
+<slides>
+ <lang>en</lang>
+  <noslidenumbers/>
+  <title>xml-slides Example Presentation without slide number rendered on each slide</title>
+```
 
