@@ -40,22 +40,33 @@ Resources to create HTML slides from an XML document, including an index file of
 
 | Element    | Parent Element | Description |
 |------------|--------|-------------|
+| desc       | slides | Descriptive information about the presentation, can have an `href` attribute for a link.  For example can be used for a link back to a website related to the presentation. |
+| footer     | slides | Element contains HTML and text content for the footer of the index and each slide |
+| noslidenumbers | slides | Disables generating rendered slide number information in each slide | script     | slide | Contains a reference to a Javascript file included on each slide |
+| slide      | slides | Container element for each slide in the set of slides |
 | slides     | root   | Container element for all of the information to generate the slides |
+| style      | slides | Contains a reference to CSS file to include in each slide |
 | title      | slides | A title for the set of slides |
 | transcript | slides | Enables the generation of a transcript for each slide and a index file of all the transcript information |
-| noslidenumbers | script | Disables generating rendered slide number information in each slide |
-| footer     | slides | Element contains HTML and text content for the footer of the index and each slide |
-| slide      | slides | Container element for each slide in the set of slides |
+|
+
+### `Person` and `Conference`Element Options
+
+| Element    | Parent Element | Description |
+|------------|--------|-------------|
+| desc       | person or conference | Descriptive information about a person or conference, can have an `href` attribute for a link |
+| name       | person or conference | name of the person or conference, can have an `href` attribute for a link |
+
 
 ### `Slide` Element Options
 
 | Element    | Parent Element | Description |
 |------------|--------|-------------|
-| title      | slide  | Used at the H1 element content in each slide as the link text in the index of slides  |
 | contents   | slide | The HTML codes for the slide content |
-| style      | slide | CSS block to use for customizing content on a slide |
+| title      | slide  | Used at the H1 element content in each slide as the link text in the index of slides  |
 | script     | slide | Javascript block to use for customizing scripting on a slide |
-| transcript | slide | Transcript block to allow a transcript of lecture content for that slide to be accessible through a "Transcript" disclosure button on the slide |
+| style      | slide | CSS block to use for customizing content on a slide |
+| transcript | slide | Transcript block to allow a transcript of lecture content for that slide to be accessible through a "Transcript" disclosure button on a slide.  Use periods to generate line breaks in the rendered transcript text. |
 
 
 Example:
