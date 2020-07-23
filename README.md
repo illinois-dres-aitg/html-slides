@@ -40,15 +40,17 @@ Resources to create HTML slides from an XML document, including an index file of
 
 | Element    | Parent Element | Description |
 |------------|--------|-------------|
+| conference | slides | Information on the event to include in the index file |
 | desc       | slides | Descriptive information about the presentation, can have an `href` attribute for a link.  For example can be used for a link back to a website related to the presentation. |
 | footer     | slides | Element contains HTML and text content for the footer of the index and each slide |
-| noslidenumbers | slides | Disables generating rendered slide number information in each slide | script     | slide | Contains a reference to a Javascript file included on each slide |
+| noslidenumbers | slides | Disables generating rendered slide number information in each slide | person     | slides | Information on a person to include in the index file.  There can be more than one person block |
+| script     | slide | Contains a reference to a Javascript file included on each slide |
 | slide      | slides | Container element for each slide in the set of slides |
 | slides     | root   | Container element for all of the information to generate the slides |
 | style      | slides | Contains a reference to CSS file to include in each slide |
 | title      | slides | A title for the set of slides |
 | transcript | slides | Enables the generation of a transcript for each slide and a index file of all the transcript information |
-|
+
 
 ### `Person` and `Conference`Element Options
 
@@ -62,7 +64,7 @@ Resources to create HTML slides from an XML document, including an index file of
 
 | Element    | Parent Element | Description |
 |------------|--------|-------------|
-| contents   | slide | The HTML codes for the slide content |
+| contents   | slide | The HTML code fragment for the content of a slide |
 | title      | slide  | Used at the H1 element content in each slide as the link text in the index of slides  |
 | script     | slide | Javascript block to use for customizing scripting on a slide |
 | style      | slide | CSS block to use for customizing content on a slide |
