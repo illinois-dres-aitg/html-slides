@@ -27,7 +27,7 @@
     <desc>September 17th, 2020</desc>
   </conference>
 
-  <desc href="../">Presentations</desc>
+  <desc href="https://github.com/illinois-dres-aitg/xml-slides">xml-slides Home</desc>
 
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
