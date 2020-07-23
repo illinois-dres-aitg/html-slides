@@ -36,9 +36,26 @@ Resources to create HTML slides from an XML document, including an index file of
 
 ## XML Format
 
-| Element | Description |
-|---------|-------------|
-| slides  | Container element for all of the information to generate the slides |
+### `Slides` Element Options
+
+| Element    | Parent Element | Description |
+|------------|--------|-------------|
+| slides     | root   | Container element for all of the information to generate the slides |
+| title      | slides | A title for the set of slides |
+| transcript | slides | Enables the generation of a transcript for each slide and a index file of all the transcript information |
+| noslidenumbers | script | Disables generating rendered slide number information in each slide |
+| footer     | slides | Element contains HTML and text content for the footer of the index and each slide |
+| slide      | slides | Container element for each slide in the set of slides |
+
+### `Slide` Element Options
+
+| Element    | Parent Element | Description |
+|------------|--------|-------------|
+| title      | slide  | Used at the H1 element content in each slide as the link text in the index of slides  |
+| contents   | slide | The HTML codes for the slide content |
+| style      | slide | CSS block to use for customizing content on a slide |
+| script     | slide | Javascript block to use for customizing scripting on a slide |
+| transcript | slide | Transcript block to allow a transcript of lecture content for that slide to be accessible through a "Transcript" disclosure button on the slide |
 
 
 Example:
