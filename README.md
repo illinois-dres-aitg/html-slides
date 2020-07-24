@@ -1,5 +1,5 @@
 # html-slides
-Resources to create HTML slides from an XML document, including an index file of all the files using their titles.
+Resources to create HTML slides from an XML document.  An XSLT stylesheet is used to convert an XML document into a set of HTML files, with an index file and separate html files for slide.  There is an option to include the text from transcription on each the slides from a presentatiion.
 
 ## Examples
 
