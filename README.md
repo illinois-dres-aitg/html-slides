@@ -1,4 +1,4 @@
-# xml-slides
+# html-slides
 Resources to create HTML slides from an XML document, including an index file of all the files using their titles.
 
 ## Examples
