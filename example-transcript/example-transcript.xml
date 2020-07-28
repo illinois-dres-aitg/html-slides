@@ -13,7 +13,7 @@
     Copyright &#169; 2020 University of Illinois
   </footer>
 
-  <title>xml-slides Example Presentation with Transcript</title>
+  <title>html-slides Example Presentation with Transcript</title>
   <person>
     <name>John Smith</name>
     <desc href="http://myuniversity.edu">My University</desc>
@@ -27,17 +27,17 @@
     <desc>September 17th, 2020</desc>
   </conference>
 
-  <desc href="https://github.com/illinois-dres-aitg/xml-slides">xml-slides Home</desc>
+  <desc href="https://github.com/illinois-dres-aitg/html-slides">html-slides Home</desc>
 
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
 
   <script>../js/jquery-2.1.1.min.js</script>
   <script>../js/bootstrap.min.js</script>
   <script>../js/bootstrap-accessibility.min.js</script>
-  <script>../js/xml-slides.js</script>
+  <script>../js/html-slides.js</script>
 
   <slide>
     <title>Goals</title>

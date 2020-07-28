@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USAGE="xml-slides filename.xml"
+USAGE="html-slides filename.xml"
 
 SLIDE_PATH=~/Sites/presentations/common/xslt/
 
@@ -15,7 +15,7 @@ CLASS_PATH=$CLASS_PATH:$SLIDE_PATH/
 # Check if arg is null
 if [ -n "$1" ]; then
 
-    java -classpath $CLASS_PATH  xslt $1 $SLIDE_PATH/xml-slides.xsl index.html
+    java -classpath $CLASS_PATH  xslt $1 $SLIDE_PATH/html-slides.xsl index.html
 
 else
   echo Usage: "$USAGE"
