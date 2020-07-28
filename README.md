@@ -3,8 +3,8 @@ Resources to create HTML slides from an XML document.  An XSLT stylesheet is use
 
 ## Examples
 
-* [Basic Slides](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example/index.html)
-* [Slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example-transcript/index.html)
+* [Basic Slides](https://raw.githack.com/illinois-dres-aitg/html-slides/master/example/index.html)
+* [Slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/html-slides/master/example-transcript/index.html)
 
 ## Creating HTML Slides
 
@@ -14,23 +14,23 @@ Resources to create HTML slides from an XML document.  An XSLT stylesheet is use
 
 ### Windows
 
-* Edit the `\xml-slides\xml-slides.bat` to define the path the to `\xml-slides\` directory
+* Edit the `\html-slides\html-slides.bat` to define the path the to `\html-slides\` directory
 * Create a directory with your XML and generated HTML files.
 * Use the following command to generate the HTML files from the XML file:
 
 ```
-..\xml-slides\xml-slides.bat filename.xml
+..\html-slides\html-slides.bat filename.xml
 
 ```
 
 ### macOS/Linux
 
-* Edit the `\xml-slides\xml-slides` to define the path the to `\xml-slides\` directory
+* Edit the `\html-slides\html-slides` to define the path the to `\html-slides\` directory
 * Create a directory with your XML and generated HTML files.
 * Use the following command to generate the HTML files from the XML file:
 
 ```
-..\xml-slides\xml-slides filename.xml
+..\html-slides\html-slides filename.xml
 
 ```
 
@@ -71,7 +71,7 @@ Resources to create HTML slides from an XML document.  An XSLT stylesheet is use
 | transcript | slide | Transcript block to allow a transcript of lecture content for that slide to be accessible through a "Transcript" disclosure button on a slide.  Use periods to generate line breaks in the rendered transcript text. |
 
 
-### Example of XML File Used To Generate Slides
+### Example of XML File Used To Generate HTML Slides
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -80,7 +80,7 @@ Resources to create HTML slides from an XML document.  An XSLT stylesheet is use
 <slides>
  <lang>en</lang>
   <addtranscript/>
-  <title>xml-slides Example Presentation</title>
+  <title>html-slides Example Presentation</title>
   <person>
     <name>Jane Smith</name>
     <desc href="http://myuniversity.edu">My University</desc>
@@ -94,17 +94,17 @@ Resources to create HTML slides from an XML document.  An XSLT stylesheet is use
     <desc>September 17th, 2020</desc>
   </conference>
 
-  <desc href="https://github.com/illinois-dres-aitg/xml-slides">xml-slides Home</desc>
+  <desc href="https://github.com/illinois-dres-aitg/html-slides">html-slides Home</desc>
 
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
   <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
-  <stylesheet media="screen">../css/xml-slides.css</stylesheet>
+  <stylesheet media="screen">../css/html-slides.css</stylesheet>
 
   <script>../js/jquery-2.1.1.min.js</script>
   <script>../js/bootstrap.min.js</script>
   <script>../js/bootstrap-accessibility.min.js</script>
-  <script>../js/xml-slides.js</script>
+  <script>../js/html-slides.js</script>
 
   <slide>
     <title>Goals</title>
@@ -139,7 +139,7 @@ Resources to create HTML slides from an XML document.  An XSLT stylesheet is use
 ## Transcript
 
 
-To include a button that discloses transcript content on each slide and geneates a trascript page, add the `<addtranscript/>` element as a child of the `<slides>` element. Example of [slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/xml-slides/master/example-transcript/index.html).
+To include a button that discloses transcript content on each slide and geneates a trascript page, add the `<addtranscript/>` element as a child of the `<slides>` element. Example of [slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/html-slides/master/example-transcript/index.html).
 
 ### Example of Enabling Transcript Feature
 ```
@@ -147,7 +147,7 @@ To include a button that discloses transcript content on each slide and geneates
 <slides>
  <lang>en</lang>
   <addtranscript/>
-  <title>xml-slides Example Presentation with Transcript</title>
+  <title>html-slides Example Presentation with Transcript</title>
 ...
 
 ```
@@ -188,6 +188,6 @@ By default each slide has the slide number and total number of slides in the nav
 <slides>
  <lang>en</lang>
   <noslidenumbers/>
-  <title>xml-slides Example Presentation without slide number rendered on each slide</title>
+  <title>html-slides Example Presentation without slide number rendered on each slide</title>
 ```
 
