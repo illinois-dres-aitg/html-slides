@@ -49,7 +49,7 @@ Resources to create HTML slides from an XML document.  An XSLT stylesheet is use
 | slides     | root   | Container element for all of the information to generate the slides |
 | style      | slides | Contains a reference to CSS file to include in each slide |
 | title      | slides | A title for the set of slides |
-| transcript | slides | Enables the generation of a transcript for each slide and a index file of all the transcript information |
+| addtranscript | slides | Enables the generation of a transcript for each slide and a index file of all the transcript information |
 
 
 ### `Person` and `Conference`Element Options
