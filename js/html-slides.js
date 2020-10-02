@@ -268,18 +268,17 @@ $(document).keydown(function( event ) {
   }
 
   if (event.ctrlKey) {
-    $('main').addClass('highlight');
+    if ($('main').hasClass('highlight')) {
+      $('main').removeClass('highlight');
+      $('footer').removeClass('highlight');
+    }
+    else {
+      $('main').addClass('highlight');
+      $('footer').addClass('highlight');
+    }
   }
 
 });
-
-$(document).keyup(function( event ) {
-  if (!event.ctrlKey) {
-    $('main').removeClass('highlight');
-  }
-
-});
-
 
 $(window).resize(
   function() {

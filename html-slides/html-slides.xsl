@@ -20,7 +20,6 @@
         <xsl:call-template name="head">
         </xsl:call-template>
 
-
       </xsl:element>
 
       <xsl:element name="body">
@@ -384,15 +383,19 @@
       <xsl:element name="div">
         <xsl:attribute name="id">footer</xsl:attribute>
         <xsl:attribute name="class">well well-sm</xsl:attribute>
-        <xsl:choose>
-          <xsl:when test="/slides/footer">
-            <xsl:apply-templates select="/slides/footer/*"/>
-            <xsl:value-of select="/slides/footer/."/>
-          </xsl:when>
-          <xsl:otherwise>
-            Copyright  &#169; 2020
-          </xsl:otherwise>
-        </xsl:choose>
+          <xsl:choose>
+            <xsl:when test="/slides/footer">
+              <xsl:apply-templates select="/slides/footer/*"/>
+              <xsl:value-of select="/slides/footer/."/>
+            </xsl:when>
+            <xsl:otherwise>
+              Copyright  &#169; 2020
+            </xsl:otherwise>
+          </xsl:choose>
+        <xsl:element name="span">
+          <xsl:attribute name="class">highlight-icon</xsl:attribute>
+          &#8598;
+        </xsl:element>
       </xsl:element>
     </xsl:element>
   </xsl:template>
