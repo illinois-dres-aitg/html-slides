@@ -267,7 +267,7 @@ $(document).keydown(function( event ) {
     event.preventDefault();
   }
 
-  if (event.ctrlKey) {
+  if (event.ctrlKey && event.altKey) {
     if ($('main').hasClass('highlight')) {
       $('main').removeClass('highlight');
       $('footer').removeClass('highlight');
