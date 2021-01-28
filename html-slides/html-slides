@@ -2,20 +2,10 @@
 
 USAGE="html-slides filename.xml"
 
-SLIDE_PATH=~/Sites/presentations/common/xslt/
-
-CLASS_PATH=$SLIDE_PATH/xalan/serializer.jar
-CLASS_PATH=$CLASS_PATH:$SLIDE_PATH/xalan/serializer.jar
-CLASS_PATH=$CLASS_PATH:$SLIDE_PATH/xalan/xercesImpl.jar
-CLASS_PATH=$CLASS_PATH:$SLIDE_PATH/xalan/xml-apis.jar
-CLASS_PATH=$CLASS_PATH:$SLIDE_PATH/xalan/xalan.jar
-CLASS_PATH=$CLASS_PATH:$SLIDE_PATH/xalan/xsltc.jar
-CLASS_PATH=$CLASS_PATH:$SLIDE_PATH/
-
 # Check if arg is null
 if [ -n "$1" ]; then
 
-    java -classpath $CLASS_PATH  xslt $1 $SLIDE_PATH/html-slides.xsl index.html
+  node ../node_modules/xslt3 -s:$1 -xsl:../html-slides/html-slides-2.xsl -o:index.html
 
 else
   echo Usage: "$USAGE"
