@@ -1,0 +1,32 @@
+{
+  "name": "html-slides",
+  "version": "1.0.0",
+  "description": "Create HTML slides form XML",
+  "main": "hhtml-slides.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "saxon-js": "^2.0.3",
+    "xslt3": "^2.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/illinois-dres-aitg/xml-slides.git"
+  },
+  "keywords": [
+    "XSLT",
+    "slides",
+    "HTML"
+  ],
+  "author": "Jon Gunderson",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/illinois-dres-aitg/xml-slides/issues"
+  },
+  "homepage": "https://github.com/illinois-dres-aitg/xml-slides#readme"
+}
