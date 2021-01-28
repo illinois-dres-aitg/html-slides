@@ -12,14 +12,13 @@ HTML slides uses the `node` modules [saxon-js](https://www.saxonica.com/saxon-js
 
 ## Creating HTML Slides
 
-* Use the command prompt to generate the HTML slides from the XML file.
 * Create a sub-directory to keep the XML and HTML slides.
-* Run the a command to
+* Place the XML file containing the slide information in the sub-directory.
+* Change the command prompt to the sub-directory.
+* Use one of the command line files in `html-slides` directory to generate the HTML files in the sub-direcotry.
 
 ### Windows
 
-* Edit the `\html-slides\html-slides.bat` to define the path the to `\html-slides\` directory
-* Create a directory with your XML and generated HTML files.
 * Use the following command to generate the HTML files from the XML file:
 
 ```
@@ -29,8 +28,6 @@ HTML slides uses the `node` modules [saxon-js](https://www.saxonica.com/saxon-js
 
 ### macOS/Linux
 
-* Edit the `\html-slides\html-slides` to define the path the to `\html-slides\` directory
-* Create a directory with your XML and generated HTML files.
 * Use the following command to generate the HTML files from the XML file:
 
 ```
