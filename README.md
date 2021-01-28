@@ -1,10 +1,14 @@
 # html-slides
-Resources to create HTML slides from an XML document.  An XSLT stylesheet is used to convert an XML document into a set of HTML files, with an index file and separate html files for slide.  There is an option to include the text from transcription on each the slides from a presentatiion.
+Resources to create HTML slides from an XML document using the command line.  An XSLT stylesheet is used to convert an XML document into a set of HTML files representing a slide show, with an index file and separate html files for slide.  There is an option to include the text from transcription on each the slides from a presentation.
 
 ## Examples
 
 * [Basic Slides](https://raw.githack.com/illinois-dres-aitg/html-slides/master/example/index.html)
 * [Slides using the transcript option](https://raw.githack.com/illinois-dres-aitg/html-slides/master/example-transcript/index.html)
+
+## Installation
+
+HTML slides uses the `node` modules [saxon-js](https://www.saxonica.com/saxon-js/index.xml) and [xslt3](https://www.saxonica.com/saxon-js/documentation/index.html#!starting/installing-nodejs) for transforming XML files to HTML.  The modules can be installed using the `npm install` command.
 
 ## Creating HTML Slides
 
