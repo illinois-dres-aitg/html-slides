@@ -31,7 +31,7 @@ HTML slides uses the `node` modules [saxon-js](https://www.saxonica.com/saxon-js
 * Use the following command to generate the HTML files from the XML file:
 
 ```
-..\html-slides\html-slides filename.xml
+../html-slides/html-slides filename.xml
 
 ```
 
