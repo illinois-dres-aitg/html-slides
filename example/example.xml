@@ -5,11 +5,11 @@
  <lang>en</lang>
   <title>html-slides Example Presentation</title>
   <footer>
-    <a href="https://illinois.edu"
+    <a href="#"
       alt="University of Illinois">
       <img src="..\images\block-i.png"/>
     </a>
-    Copyright &#169; 2020 University of Illinois
+    Copyright &#169; 2023 John Smith
   </footer>
   <person>
     <name>John Smith</name>
@@ -27,13 +27,9 @@
   <desc href="https://github.com/illinois-dres-aitg/html-slides">html-slides Home</desc>
 
   <stylesheet media="screen">../css/bootstrap.min.css</stylesheet>
-  <stylesheet media="screen">../css/bootstrap-theme.min.css</stylesheet>
-  <stylesheet media="screen">../css/bootstrap-accessibility.css</stylesheet>
   <stylesheet media="screen">../css/html-slides.css</stylesheet>
 
-  <script>../js/jquery-2.1.1.min.js</script>
   <script>../js/bootstrap.min.js</script>
-  <script>../js/bootstrap-accessibility.min.js</script>
   <script>../js/html-slides.js</script>
 
   <slide>
@@ -75,6 +71,44 @@
       </ul>
     </contents>
   </slide>
+
+
+  <slide>
+    <title>Data Table</title>
+    <contents>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+    </contents>
+  </slide>
+
+
 
 </slides>
 

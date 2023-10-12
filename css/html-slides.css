@@ -36,23 +36,6 @@ summary {
 }
 
 
-header {
-    border-bottom: orange solid thin;
-    margin-bottom: 0.25em;
-    padding-bottom: 0.25em;
-    min-height: 100px;
-    vertical-align: bottom;
-}
-
-header img {
-    padding-right: 0.5em;
-    float: left;
-}
-
-header h1 {
-    padding-top: 0.25em;
-}
-
 
 footer {
     margin-top: 0.25em;
@@ -60,7 +43,6 @@ footer {
     margin-top: 1em;
     clear: both;
 }
-
 
 footer a img {
     position: relative;
@@ -101,27 +83,40 @@ nav ul li {
     padding-right: 1em;
 }
 
-.navbar-default {
+#slide-nav,
+footer {
     background-image: linear-gradient(to bottom,#fff 0,#e0e0e0 100%);
     background-color: #e0e0e0;
 }
 
-.navbar-default .navbar-nav > li > a,
-.navbar-default .navbar-text {
-    color: #333;
+.navbar-text {
+    position: absolute;
+    right: 1.5em;
 }
 
 
-.navbar-default .navbar-nav>li>a:focus {
+.navbar-nav > li.transcript {
+    position: absolute;
+    right: 7.5em;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav > li.transcript {
+    position: static;
+    right: auto;
+  }
+}
+
+.navbar-nav>li>a:focus {
     outline: solid thin #AAAAAA;
 }
 
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-nav>li>a:hover {
     outline: none;
 }
 
-.navbar-default .navbar-nav>li>a:focus,
-.navbar-default .navbar-nav>li>a:hover {
+#slide-nav .navbar-nav>li>a:focus,
+#slide-nav .navbar-nav>li>a:hover {
     text-decoration: underline;
     background-color: #EEEEEE;
 }
@@ -237,6 +232,11 @@ main table .num {
 main table .text {
     text-align: left;
 }
+
+main table.table thead {
+    border-bottom: solid 1px black;
+}
+
 
 main table.table tbody th.total,
 main table.table tbody td.total {

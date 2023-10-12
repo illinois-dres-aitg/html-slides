@@ -15,6 +15,11 @@
 
         <xsl:element name="title"><xsl:value-of select="/slides/title/."/></xsl:element>
 
+        <xsl:element name="meta">
+          <xsl:attribute name="name">viewport</xsl:attribute>
+          <xsl:attribute name="content">width=device-width, initial-scale=1</xsl:attribute>
+        </xsl:element>
+
         <xsl:call-template name="head">
         </xsl:call-template>
 
@@ -477,25 +482,22 @@
 
         <xsl:element name="nav">
           <xsl:attribute name="id">nav</xsl:attribute>
-          <xsl:attribute name="class">navbar navbar-default</xsl:attribute>
+          <xsl:attribute name="class">navbar navbar-expand-md bg-body-tertiary</xsl:attribute>
 
           <xsl:element name="div">
-            <xsl:attribute name="class">container</xsl:attribute>
+            <xsl:attribute name="class">container-fluid</xsl:attribute>
 
-              <xsl:element name="div">
-               <xsl:attribute name="class">navbar-header</xsl:attribute>
-               <xsl:element name="button">
-                 <xsl:attribute name="class">navbar-toggle collapsed navbar-left</xsl:attribute>
-                 <xsl:attribute name="data-toggle">collapse</xsl:attribute>
-                 <xsl:attribute name="data-target">#slide-nav</xsl:attribute>
-                 <xsl:element name="span">
-                  <xsl:attribute name="class">sr-only</xsl:attribute>
-                  Toggle navigation
-                </xsl:element>
-                <xsl:element name="span"><xsl:attribute name="class">icon-bar</xsl:attribute></xsl:element>
-                <xsl:element name="span"><xsl:attribute name="class">icon-bar</xsl:attribute></xsl:element>
-                <xsl:element name="span"><xsl:attribute name="class">icon-bar</xsl:attribute></xsl:element>
-              </xsl:element>
+             <xsl:element name="button">
+               <xsl:attribute name="class">navbar-toggler</xsl:attribute>
+               <xsl:attribute name="type">button</xsl:attribute>
+               <xsl:attribute name="data-bs-toggle">collapse</xsl:attribute>
+               <xsl:attribute name="data-bs-target">#slide-nav</xsl:attribute>
+               <xsl:attribute name="aria-controls">slide-nav</xsl:attribute>
+               <xsl:attribute name="aria-controls">false</xsl:attribute>
+               <xsl:attribute name="aria-label">Slide Navigation</xsl:attribute>
+               <xsl:element name="span">
+                 <xsl:attribute name="class">navbar-toggler-icon</xsl:attribute>
+               </xsl:element>
             </xsl:element>
 
             <xsl:element name="div">
@@ -503,13 +505,16 @@
               <xsl:attribute name="class">collapse navbar-collapse</xsl:attribute>
 
               <xsl:element name="ul">
-                <xsl:attribute name="class">nav navbar-nav</xsl:attribute>
+                <xsl:attribute name="class">navbar-nav</xsl:attribute>
 
                 <xsl:choose>
                   <xsl:when test="$num=0">
                     <xsl:element name="li">
-                      <xsl:attribute name="class">disabled</xsl:attribute>
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="tabindex">-1</xsl:attribute>
+                        <xsl:attribute name="aria-disabled">true</xsl:attribute>
+                        <xsl:attribute name="class">nav-link disabled</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_INDEX</xsl:attribute>
                         <xsl:attribute name="href">#</xsl:attribute>
                         Index
@@ -518,7 +523,9 @@
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:element name="li">
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="class">nav-link</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_INDEX</xsl:attribute>
                         <xsl:attribute name="href">index.html</xsl:attribute>
                         Index
@@ -528,9 +535,11 @@
                 </xsl:choose>
 
                 <xsl:choose>
-                  <xsl:when test="$num>1">
+                  <xsl:when test="$num!=1">
                     <xsl:element name="li">
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="class">nav-link</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_FIRST</xsl:attribute>
                         <xsl:attribute name="href">slide1.html</xsl:attribute>
                         <xsl:attribute name="title">Slide 1</xsl:attribute>
@@ -540,8 +549,11 @@
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:element name="li">
-                      <xsl:attribute name="class">disabled</xsl:attribute>
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="tabindex">-1</xsl:attribute>
+                        <xsl:attribute name="aria-disabled">true</xsl:attribute>
+                        <xsl:attribute name="class">nav-link disabled</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_FIRST</xsl:attribute>
                         <xsl:attribute name="href">slide1.html</xsl:attribute>
                         <xsl:attribute name="title">On First Slide</xsl:attribute>
@@ -554,7 +566,9 @@
                 <xsl:choose>
                   <xsl:when test="$num>1">
                     <xsl:element name="li">
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="class">nav-link</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_PREVIOUS</xsl:attribute>
                         <xsl:attribute name="href"><xsl:value-of select="$previous"/></xsl:attribute>
                         <xsl:attribute name="title"><xsl:value-of select="$previousTitle"/></xsl:attribute>
@@ -564,8 +578,11 @@
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:element name="li">
-                      <xsl:attribute name="class">disabled</xsl:attribute>
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="tabindex">-1</xsl:attribute>
+                        <xsl:attribute name="aria-disabled">true</xsl:attribute>
+                        <xsl:attribute name="class">nav-link disabled</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_PREVIOUS</xsl:attribute>
                         <xsl:attribute name="href">#</xsl:attribute>
                         <xsl:attribute name="title">On First Slide</xsl:attribute>
@@ -578,7 +595,9 @@
                 <xsl:choose>
                   <xsl:when test="$num=0">
                     <xsl:element name="li">
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="class">nav-link</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_NEXT</xsl:attribute>
                         <xsl:attribute name="href"><xsl:value-of select="$next"/></xsl:attribute>
                         <xsl:attribute name="title"><xsl:value-of select="$nextTitle"/></xsl:attribute>
@@ -586,7 +605,9 @@
                       </xsl:element>
                     </xsl:element>
                     <xsl:element name="li">
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="class">nav-link</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_LAST</xsl:attribute>
                         <xsl:attribute name="href"><xsl:value-of select="$last"/></xsl:attribute>
                         <xsl:attribute name="title"><xsl:value-of select="$lastTitle"/></xsl:attribute>
@@ -597,7 +618,9 @@
 
                   <xsl:when test="$num&lt;$total">
                     <xsl:element name="li">
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="class">nav-link</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_NEXT</xsl:attribute>
                         <xsl:attribute name="href"><xsl:value-of select="$next"/></xsl:attribute>
                         <xsl:attribute name="title"><xsl:value-of select="$nextTitle"/></xsl:attribute>
@@ -605,7 +628,9 @@
                       </xsl:element>
                     </xsl:element>
                     <xsl:element name="li">
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="class">nav-link</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_LAST</xsl:attribute>
                         <xsl:attribute name="href"><xsl:value-of select="$last"/></xsl:attribute>
                         <xsl:attribute name="title"><xsl:value-of select="$lastTitle"/></xsl:attribute>
@@ -616,8 +641,11 @@
 
                   <xsl:otherwise>
                     <xsl:element name="li">
-                      <xsl:attribute name="class">disabled</xsl:attribute>
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="tabindex">-1</xsl:attribute>
+                        <xsl:attribute name="aria-disabled">true</xsl:attribute>
+                        <xsl:attribute name="class">nav-link disabled</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_NEXT</xsl:attribute>
                         <xsl:attribute name="href">#</xsl:attribute>
                         <xsl:attribute name="title">On Last Slide</xsl:attribute>
@@ -625,8 +653,11 @@
                       </xsl:element>
                     </xsl:element>
                     <xsl:element name="li">
-                      <xsl:attribute name="class">disabled</xsl:attribute>
+                      <xsl:attribute name="class">nav-item</xsl:attribute>
                       <xsl:element name="a">
+                        <xsl:attribute name="tabindex">-1</xsl:attribute>
+                        <xsl:attribute name="aria-disabled">true</xsl:attribute>
+                        <xsl:attribute name="class">nav-link disabled</xsl:attribute>
                         <xsl:attribute name="id">ID_SLIDE_LAST</xsl:attribute>
                         <xsl:attribute name="href">#</xsl:attribute>
                         <xsl:attribute name="name">On Last Slide</xsl:attribute>
@@ -635,14 +666,12 @@
                     </xsl:element>
                   </xsl:otherwise>
                 </xsl:choose>
-              </xsl:element>
 
-              <xsl:element name="ul">
-                <xsl:attribute name="class">nav navbar-nav pull-right</xsl:attribute>
                 <xsl:if test="/slides/addtranscript">
                   <xsl:element name="li">
-                    <xsl:attribute name="style">float: left</xsl:attribute>
+                    <xsl:attribute name="class">nav-item transcript</xsl:attribute>
                     <xsl:element name="a">
+                      <xsl:attribute name="class">nav-link</xsl:attribute>
                       <xsl:attribute name="target">transcript</xsl:attribute>
                       <xsl:attribute name="href">transcript.html#slide<xsl:value-of select="$num"/></xsl:attribute>
                         Full Audio Transcript
@@ -651,9 +680,9 @@
                 </xsl:if>
 
                 <xsl:if test="not(/slides/noslidenumbers)">
-                  <xsl:if test="position() > 0">
-                    <xsl:element name="li">
-                      <xsl:attribute name="class">nav navbar-text</xsl:attribute>
+                  <xsl:if test="$num > 0">
+                    <xsl:element name="span">
+                      <xsl:attribute name="class">navbar-text</xsl:attribute>
                         <xsl:text>Slide </xsl:text>
                         <xsl:value-of select="position()"/>
                         <xsl:text> of </xsl:text>
@@ -663,6 +692,9 @@
                 </xsl:if>
 
               </xsl:element>
+
+
+
             </xsl:element>
           </xsl:element>
        </xsl:element>

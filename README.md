@@ -1,4 +1,4 @@
-# html-slides
+# html-slides 1.1
 Resources to create HTML slides from an XML document using the command line.  An XSLT stylesheet is used to convert an XML document into a set of HTML files representing a slide show, with an index file and separate html files for slide.  There is an option to include the text from transcription on each the slides from a presentation.
 
 ## Examples
@@ -192,3 +192,8 @@ By default each slide has the slide number and total number of slides in the nav
   <title>html-slides Example Presentation without slide number rendered on each slide</title>
 ```
 
+## Version History
+
+### Version 1.1
+* Updated to bootstrap 5
+* Fixed bug with slide number appearing on index page

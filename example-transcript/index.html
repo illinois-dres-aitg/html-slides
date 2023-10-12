@@ -1,40 +1,34 @@
-
 <!DOCTYPE html>
 <html lang="en">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <title>html-slides Example Presentation with Transcript</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
       <link rel="stylesheet" type="text/css" href="../css/bootstrap-accessibility.css">
       <link rel="stylesheet" type="text/css" href="../css/html-slides.css"><script src="../js/jquery-2.1.1.min.js"></script><script src="../js/bootstrap.min.js"></script><script src="../js/bootstrap-accessibility.min.js"></script><script src="../js/html-slides.js"></script><style id="style"></style>
    </head>
    <body>
-      <nav id="nav" class="navbar navbar-default">
-         <div class="container">
-            <div class="navbar-header"><button class="navbar-toggle collapsed navbar-left" data-toggle="collapse" data-target="#slide-nav"><span class="sr-only">
-                  Toggle navigation
-                </span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
-            <div id="slide-nav" class="collapse navbar-collapse">
-               <ul class="nav navbar-nav">
-                  <li class="disabled"><a id="ID_SLIDE_INDEX" href="#">
+      <nav id="nav" class="navbar navbar-expand-md bg-body-tertiary">
+         <div class="container-fluid"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#slide-nav" aria-controls="false" aria-label="Slide Navigation"><span class="navbar-toggler-icon"></span></button><div id="slide-nav" class="collapse navbar-collapse">
+               <ul class="navbar-nav">
+                  <li class="nav-item"><a tabindex="-1" aria-disabled="true" class="nav-link disabled" id="ID_SLIDE_INDEX" href="#">
                         Index
                       </a></li>
-                  <li class="disabled"><a id="ID_SLIDE_FIRST" href="slide1.html" title="On First Slide">
+                  <li class="nav-item"><a class="nav-link" id="ID_SLIDE_FIRST" href="slide1.html" title="Slide 1">
                         First
                       </a></li>
-                  <li class="disabled"><a id="ID_SLIDE_PREVIOUS" href="#" title="On First Slide">
+                  <li class="nav-item"><a tabindex="-1" aria-disabled="true" class="nav-link disabled" id="ID_SLIDE_PREVIOUS" href="#" title="On First Slide">
                         Previous
                       </a></li>
-                  <li><a id="ID_SLIDE_NEXT" href="slide1.html" title="Slide 1">
+                  <li class="nav-item"><a class="nav-link" id="ID_SLIDE_NEXT" href="slide1.html" title="Slide 1">
                         Next
                       </a></li>
-                  <li><a id="ID_SLIDE_LAST" href="slide2.html" title="Slide 2">
+                  <li class="nav-item"><a class="nav-link" id="ID_SLIDE_LAST" href="slide2.html" title="Slide 2">
                         Last
                       </a></li>
-               </ul>
-               <ul class="nav navbar-nav pull-right">
-                  <li style="float: left"><a target="transcript" href="transcript.html#slide0">
+                  <li class="nav-item transcript"><a class="nav-link" target="transcript" href="transcript.html#slide0">
                         Full Audio Transcript
                     </a></li>
                </ul>
